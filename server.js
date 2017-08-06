@@ -6,26 +6,25 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    
-    var 'article-One':{
+ 'article-one': {
     title : "Article One | Suyash Pawar",
     heading: "Article One",
     date: "Jun 5,2015",
-    content: "This is my first content"},
-    
-    var 'article-Two' : {
-    title: "Article One | Suyash Pawar",
-    heading: "Article Two",
+    content: "This is my first content"
+        },
+        'article-two': {
+    title : "Article Two | Suyash Pawar",
+    heading: "Article two",
     date: "Jun 10,2015",
-    content: "This is my second content"},
-    
-    var 'article-Three' : {
-    title: "Article Three | Suyash Pawar",
+    content: "This is my second content"
+        },
+        'article-three': {
+    title : "Article Three | Suyash Pawar",
     heading: "Article Three",
     date: "Jun 15,2015",
-    content: "This is my third content"}
-    
-} ;   
+    content: "This is my third content"
+        },
+};
 function createTemplate(data) {
     var title = data.title;
     var heading = data.heading;
