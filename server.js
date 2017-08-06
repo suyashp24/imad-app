@@ -5,8 +5,65 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+var articles = {
+    
+    var 'article-One':{
+    title : "Article One | Suyash Pawar",
+    heading: "Article One",
+    date: "Jun 5,2015",
+    content: "This is my first content"},
+    
+    var 'article-Two' : {
+    title: "Article One | Suyash Pawar",
+    heading: "Article Two",
+    date: "Jun 10,2015",
+    content: "This is my second content"},
+    
+    var 'article-Three' : {
+    title: "Article Three | Suyash Pawar",
+    heading: "Article Three",
+    date: "Jun 15,2015",
+    content: "This is my third content"}
+    
+} ;   
+function createTemplate(data) {
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content =data.content;
+
+var htmlTemplate =`
+    <html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scaled=1">
+    </head>
+    <body>
+        <div>
+            <a href="/">home</a>
+        </div>
+        <hr/>
+        <h3>
+              ${heading}
+        </h3>
+        <div>
+              ${date}
+        </div>
+        <div>
+            <p>
+                ${content}
+            </p>
+        </div>
+    </body>
+</html>`;    
+}
+
+var articleName = req.params.articleName;
+
+app.get('/:articleName', function (req, res) {
+  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
