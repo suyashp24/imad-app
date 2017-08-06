@@ -56,7 +56,8 @@ var htmlTemplate =`
             </p>
         </div>
     </body>
-</html>`;    
+</html>`
+return htmlTemplate;
 }
 
 app.get('/:articleName', function (req, res) {
