@@ -17,6 +17,6 @@ var button = document.getElementById('counter');
         }
     };
     
-    request.open('GET','http://suyashpawar24.imad.hasura-app.io/counter',true);
+    request.open('GET','http://suyashpawar24.imad.hasura-app.io',true);
     request.send(null);
 };
