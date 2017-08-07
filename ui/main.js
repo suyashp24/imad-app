@@ -6,7 +6,7 @@ var button = document.getElementById('counter');
     
     request.onreadystatechange = function(){
         
-        if(request.readyState === XMLHttpRequest.DONE){
+        if (request.readyState === XMLHttpRequest.DONE){
             
             if(request.status === 200){
                 
@@ -17,6 +17,6 @@ var button = document.getElementById('counter');
         }
     };
     
-    request.open('GET','http://www.google.com',true);
+    request.open('GET','http://suyashpawar.imad.hasura-app.io',true);
     request.send(null);
 };
