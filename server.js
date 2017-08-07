@@ -66,6 +66,11 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
+var counter = counter + 1;
+app.get('/counter', function (req, res) {
+    counter = counter+1;
+  res.send(counter.toString());
+});
 
 
 app.get('/ui/style.css', function (req, res) {
