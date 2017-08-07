@@ -2,7 +2,7 @@ var button = document.getElementById('counter');
 
 var counter = 0;
  
- function invoke() {
+ var button =function invoke() {
     
     var request = new XMLHttpRequest();
     
@@ -18,9 +18,6 @@ var counter = 0;
             }
         }
     };
-    counter = counter + 1;
-    var span = document.getElemetById('count');
-    span.innerHTML = counter.toString();
     request.open('GET','http://suyashpawar.imad.hasura-app.io',true);
     request.send(null);
 };
