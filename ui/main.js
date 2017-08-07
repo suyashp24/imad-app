@@ -4,23 +4,23 @@ var counter = 0;
  
  button.onClick = function () {
     
-   // var request = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
     
-  //  request.onreadystatechange = function(){
+    request.onreadystatechange = function(){
         
-        //if (request.readyState === XMLHttpRequest.DONE){
+        if (request.readyState === XMLHttpRequest.DONE){
             
-           // if(request.status === 200){
+           if(request.status === 200){
                 
-              //  var counter = request.responseText;
-                //var span = document.getElementById('count');
-                //span.innerHTML = counter.toString();
-            //}
-       // }
-    //};
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
     counter = counter + 1;
     var span = document.getElemetById('count');
     span.innerHTML = counter.toString();
-    //request.open('GET','http://suyashpawar.imad.hasura-app.io',true);
-    //request.send(null);
+    request.open('GET','http://suyashpawar.imad.hasura-app.io',true);
+    request.send(null);
 };
