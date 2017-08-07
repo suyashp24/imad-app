@@ -57,7 +57,7 @@ var htmlTemplate =`
         </div>
     </body>
 </html>`;
-return htmlTemplate
+return htmlTemplate;
 }
 
 var counter = 0;
