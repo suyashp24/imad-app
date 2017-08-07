@@ -14,6 +14,6 @@ button.onClick = function(){
         }
     };
     
-    request.open('GET','http://suyashpawar24.imad.hasura.io/counter',true);
+    request.open('GET','http://suyashpawar24.imad.hasura-app.io/counter',true);
     request.send(null);
 };
