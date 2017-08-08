@@ -19,3 +19,7 @@
     request.open('GET','http://suyashpawar.imad.hasura-app.io',true);
     request.send(null);
 };
+
+document.getElementById('tp').onClick = function(){
+    alert("Hi everybody");
+};
